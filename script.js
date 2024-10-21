@@ -298,11 +298,11 @@ if ('webkitSpeechRecognition' in window) {
             })
             .then(data => {
                 const fact = data.text; // Get the fact text
-                commandOutput.textContent = fact; // Display the fact in commandOutput
+                setCommandOutput(fact); // Display the fact in commandOutput
             })
             .catch(error => {
                 console.error('Error fetching fact:', error);
-                commandOutput.textContent = 'Sorry, I could not fetch a fact.';
+                setCommandOutput('Sorry, I could not fetch a fact.');
             });
     }
 
@@ -322,13 +322,13 @@ if ('webkitSpeechRecognition' in window) {
         })
         .catch(error => {
             console.error('Error:', error);
-            commandOutput.textContent = 'Sorry, unable to fetch news at the moment.';
+            setCommandOutput('Sorry, unable to fetch news at the moment.');
         });
 }
 
 function displayNewsInCommandOutput(articles) {
     if (articles.length === 0) {
-        commandOutput.textContent = 'No news articles found.';
+        setCommandOutput('No news articles found.');
         return;
     }
 
