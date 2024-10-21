@@ -240,6 +240,24 @@ if ('webkitSpeechRecognition' in window) {
   
       return now.toLocaleString('en-US', options);
     }
+
+      // Function to fetch weather data from the OpenWeatherMap API
+      async function fetchWeather(city) {
+        const apiKey = 'cb055688292138eb0d20670465c7e954'; // Replace with your OpenWeatherMap API key
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('City not found');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching weather:', error);
+            return null;
+        }
+    }
   
     async function getWeatherInfo(city) {
       const weatherData = await fetchWeather(city);
