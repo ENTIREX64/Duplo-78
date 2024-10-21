@@ -20,7 +20,7 @@
 
 ## Running this project
 - This project can only be run online, as downloading the files and running the `index.html` will not give a smooth experience, especially with the API features.
-- You can find the link here.
+- You can find the link [here](https://entirex64.github.io/Duplo-78/).
 
 ## How I made it
 ### This project is 100% made using the Frontend Trio
