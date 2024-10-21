@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duplo-78</title>
+  <link rel="icon" type="image/x-icon" href="Duplo-78.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="menu-btn" class="menu-btn">Function Menu</button>
+<div id="function-menu" class="menu-popup">
+  <div class="menu-content">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <h2>Available Functions</h2>
+    <h4>Hover over each function to find the keywords to be used for each command</h4>
+    <ul id="function-list">
+      <li data-message="Say 'Change background to [color]'">1. Changes the background color of the website</li>
+      <li data-message="Say 'Go to [website]'">2. Opens different websites</li>
+      <li data-message="Say 'Play music'">3. Plays jazzy music</li>
+      <li data-message="Say 'Open the calculator'">4. Has an in-built calculator</li>
+      <li data-message="Say 'What is the date and time?'">5. Shows the date and time</li>
+      <li data-message="Say 'What is the weather in [city]?'">6. Gives real-time weather information in any city</li>
+      <li data-message="Say 'Tell a joke'">7. Cracks funny(?) jokes</li>
+      <li data-message="Say 'Give a fact'">8. Gives interesting facts</li>
+      <li data-message="Say 'Give the news headines'">9. Keeps you updates with the latest news headlines</li>
+    </ul>
+    <div id="hover-message"></div>
+  </div>
+</div>
+  <div class="container">
+    <h1>Duplo-78: A Voice Assistant</h1><br><br>
+    <button id="start-btn">Start Voice Command</button><br><br><br>
+    <p id="status">Press the button and say commands like "Open YouTube"</p>
+    <p id="command-output"></p>
+    <audio id="background-music" src="Purple Rider.mp3" preload="auto"></audio>
+  </div><br><br><br><br><br>
+  <div class="container">
+  <div id="calculator" style="display: none;">
+    <h2>Calculator</h2>
+    <div class="calc-container">
+      <input type="number" id="num1" placeholder="No. 1">
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" id="num2" placeholder="No. 2">
+    </div>
+    <button id="calculate-btn">Calculate</button>
+    <p id="calc-result">Result: <span id="result"></span></p>
+  </div></div>
+  <script src="script.js"></script>
+</body>
+</html>

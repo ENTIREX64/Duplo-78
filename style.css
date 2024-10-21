@@ -1,0 +1,324 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px;
+  }
+
+/* Function Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Function Menu Pop-up (modal) */
+.menu-popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  z-index: 1001; /* Higher than other elements */
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hover-message {
+  display: flex; 
+  position:absolute; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  padding: 5px; 
+  border-radius: 5px;
+  font-size: 100px;
+}
+
+#function-list li {
+  cursor: default; /* Changes cursor to pointer on hover */
+}
+
+#hover-message {
+  z-index: 1000; /* Ensure it appears above other elements */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #007bff;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 80px;
+  right: 375px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Available Functions list */
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-content ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.date-time {
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 20px;    
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.466);
+}
+
+  /* Disable scrolling */
+  body.no-scroll {
+  overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0056b3;
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00408a;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin-top: 110px;
+    margin-left: 305px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 16px rgb(0, 0, 0);
+  }
+  
+  h1 {
+    color: #333;
+    font-family: Consolas, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  h1:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.2);
+  }
+  
+  button {
+    padding: 24px 48px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Increased shadow on hover */
+  }
+  
+  button:active {
+    background-color: #00408a; /* Even darker blue when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Reduced shadow on click */
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 30 30 30px rgba(0, 123, 255, 0.5); /* Glowing effect on focus */
+  }
+  
+  #status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+    font-family: monospace;
+  }
+  
+  #command-output {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: consolas;
+  }
+  
+  .listening {
+    animation: bounce 1s infinite;
+  }
+
+  .gliding {
+    animation: glide 3s infinite; /* Glide animation for heading */
+  }
+
+  h2{
+    color: #0056b3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    size: 80px;
+  }
+
+/* Calculator container */
+.calc-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input fields and select dropdown */
+#calculator input[type="number"],
+#calculator select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #0059ff;
+  width: 80px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+#calculator input[type="number"]:focus,
+#calculator select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Calculate button */
+#calculate-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#calculate-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 91, 187, 0.3);
+}
+
+/* Result display */
+#calc-result {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* Center the calculator on the page */
+#calculator {
+  text-align: center;
+}
+
+  
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes glide {
+    0% {
+      transform: translate(0, 0); /* Start in the center */
+    }
+    20% {
+      transform: translate(-5px, -5px); /* Move up and to the left */
+    }
+    40% {
+      transform: translate(5px, 5px); /* Move down and to the right */
+    }
+    60% {
+      transform: translate(-5px, 5px); /* Move down and to the left */
+    }
+    80% {
+      transform: translate(5px, -5px); /* Move up and to the right */
+    }
+    100% {
+      transform: translate(0, 0); /* Return to center */
+    }
+  }
