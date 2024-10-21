@@ -26,10 +26,9 @@
 ### This project is 100% made using the Frontend Trio
 - HTML
 - CSS
-- Java
+- Javascript
 
 ## Acknowledgments
 - [ChatGPT](https://www.chatgpt.com), for helping with most of the code
 - [Visual Studio Code](https://code.visualstudio.com/), for being the best text-editor out there
 - [Pixlr](https://www.pixlr.com), where I designed the favicon
-- And you (💖) too
