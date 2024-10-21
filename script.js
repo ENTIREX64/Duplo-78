@@ -287,19 +287,23 @@ if ('webkitSpeechRecognition' in window) {
     }
   
     function tellAFact() {
-      fetch('http://numbersapi.com/random/trivia')
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.text();
-          })
-          .then(data => {
-              setCommandOutput(data);
-          })
-          .catch(error => {
-              setCommandOutput('Sorry, I could not fetch a fact.');
-          });
+        const url = 'https://uselessfacts.jsph.pl/random.json?language=en'; // Fetch a random useless fact
+    
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error fetching fact');
+                }
+                return response.json(); // Parse the JSON response
+            })
+            .then(data => {
+                const fact = data.text; // Get the fact text
+                commandOutput.textContent = fact; // Display the fact in commandOutput
+            })
+            .catch(error => {
+                console.error('Error fetching fact:', error);
+                commandOutput.textContent = 'Sorry, I could not fetch a fact.';
+            });
     }
 
     function fetchNews() {
