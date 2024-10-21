@@ -303,8 +303,8 @@ if ('webkitSpeechRecognition' in window) {
     }
 
     function fetchNews() {
-    const apiKey = '15e6ed2a6de9468eb73a09cede2a9d7c';
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+    const apiKey = 'ec953bcd49c1835d4cf994c20cb4967a';
+    const url = `https://gnews.io/api/v4/top-headlines?token=${apiKey}&lang=en&country=us&max=4`;
 
     fetch(url)
         .then(response => {
@@ -328,12 +328,12 @@ function displayNewsInCommandOutput(articles) {
         return;
     }
 
-    let newsContent = 'Here are the latest news headlines:\n\n';
-    articles.slice(0, 3).forEach((article, index) => {
-        newsContent += `${index + 1}. ${article.title}\n`;
+    let newsContent = ''; // No introductory text, only headlines
+    articles.forEach((article, index) => { // Loop through articles
+        newsContent += `${index + 1}. ${article.title}\n`; // Display the title
     });
 
-    commandOutput.textContent = newsContent;
+    commandOutput.textContent = newsContent; // Set the news headlines in commandOutput
     speakText('Here are the latest news headlines.')
 }
   
