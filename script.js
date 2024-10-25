@@ -84,7 +84,9 @@ if ('webkitSpeechRecognition' in window) {
   
     function handleCommands(transcript) {
       try {
-          if (transcript.includes('background')) {
+          if (transcript.includes('78')) {
+              setCommandOutput('Hi there. I\'m Duplo-78, a custom voice assistant');
+          } else if (transcript.includes('background')) {
               changeBackground(transcript);
           } else if (transcript.includes('calculator')) {
               toggleCalculator(transcript);
